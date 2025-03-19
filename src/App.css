@@ -1,0 +1,144 @@
+/* about page */
+
+.container-sec{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  height: 300px;
+}
+.first-line{
+  font-size: 1.2rem;
+  color: #613db8;
+  font-weight: 500;
+  margin: 0;
+}
+.second-line{
+  font-size: 2.1rem;
+  margin: 0;
+}
+.third-line{
+  font-size: 1.4rem;
+  color: #6b7488;
+  font-weight: 400;
+  margin: 0;
+}
+.image-size{
+  width: 90dvw;
+}
+
+.disc-container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+.first-dec-line{
+  margin: 0;
+  font-size: 1.2rem;
+  color: #613db8;
+  font-weight: 500;
+
+}
+.second-dec-line{
+  margin: 0;
+  font-size: 35px;
+}
+.third-dec-line{
+  margin: 0;
+  font-size: 22px;
+  color: #6b7488;
+  font-weight: 400;
+}
+.image-container{
+  background-color: #F9FAFB;
+  padding: 5rem 1rem;
+  margin: 0;
+
+}
+.metric{
+  margin: 0;
+  font-size: 50px;
+  color: #734ccc;
+  font-weight: 700;
+}
+.metic-des{
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+.img-continer{
+  text-align: center;
+}
+.large-screen{
+  display: none;
+}
+.mob-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Tablet styles (≥ 768px) */
+@media (min-width: 978px) {
+  .mob-container{
+    display: none;
+  }
+  .large-screen{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 0rem 5rem;
+  }
+  .third-dec-line{
+    display: none;
+  }
+  .metrics-continer{
+    display: grid;
+    grid-template-columns: repeat(2 , 2fr);
+  }
+  .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem;
+    flex-direction: row-reverse;
+  }
+  .image-container-met{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 600px;
+  }
+  .image-size{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  /* .metrics-continer{
+    flex-basis: 50%;
+  }
+  .img-continer{
+    flex-basis: 50%;
+  } */
+}
+
+/* Desktop styles (≥ 1024px) */
+/* @media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+} */
+
+/* Large screens (≥ 1440px) */
+/* @media (min-width: 1440px) {
+  body {
+    font-size: 22px;
+  }
+} */
