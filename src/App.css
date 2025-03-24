@@ -82,7 +82,71 @@
   width: 100%;
 }
 
-/* Tablet styles (≥ 768px) */
+:root {
+  --scroll-padding: 50px; /* Matches new navbar height */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: var(--scroll-padding);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.5;
+  color: #333;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: var(--scroll-padding);
+  scroll-margin-top: var(--scroll-padding);
+}
+
+/* Ensure content doesn't hide behind navbar */
+section:first-of-type {
+  padding-top: var(--scroll-padding);
+}
+
+/* Add smooth transitions for all interactive elements */
+a, button {
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Disable blue highlight on mobile tap */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --scroll-padding: 53px;
+  }
+
+  section {
+    padding: var(--scroll-padding) 1rem 2rem;
+  }
+  html {
+    scroll-padding-top: var(--scroll-padding);
+  }
+}
+
+/* Tablet styles (≥ 978px) */
 @media (min-width: 978px) {
   .mob-container{
     display: none;
@@ -121,24 +185,8 @@
     height: 500px;
     object-fit: cover;
   }
-  /* .metrics-continer{
-    flex-basis: 50%;
-  }
-  .img-continer{
-    flex-basis: 50%;
-  } */
 }
 
-/* Desktop styles (≥ 1024px) */
-/* @media (min-width: 1024px) {
-  body {
-    font-size: 20px;
-  }
-} */
-
-/* Large screens (≥ 1440px) */
-/* @media (min-width: 1440px) {
-  body {
-    font-size: 22px;
-  }
-} */
+#root {
+    scroll-behavior: smooth;
+}
